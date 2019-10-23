@@ -34,7 +34,6 @@
             this.labelSzulDatum = new System.Windows.Forms.Label();
             this.labelNem = new System.Windows.Forms.Label();
             this.labelKedvencHobbi = new System.Windows.Forms.Label();
-            this.listBoxFile = new System.Windows.Forms.ListBox();
             this.buttonMentes = new System.Windows.Forms.Button();
             this.buttonBetoltes = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
@@ -47,6 +46,7 @@
             this.groupBoxNem = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.listBoxKedvencHobbi = new System.Windows.Forms.ListBox();
+            this.listBoxFile = new System.Windows.Forms.ListBox();
             this.groupBoxNem.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -99,14 +99,6 @@
             this.labelKedvencHobbi.Size = new System.Drawing.Size(79, 13);
             this.labelKedvencHobbi.TabIndex = 6;
             this.labelKedvencHobbi.Text = "Kedvenc hobbi";
-            // 
-            // listBoxFile
-            // 
-            this.listBoxFile.FormattingEnabled = true;
-            this.listBoxFile.Location = new System.Drawing.Point(203, 25);
-            this.listBoxFile.Name = "listBoxFile";
-            this.listBoxFile.Size = new System.Drawing.Size(294, 277);
-            this.listBoxFile.TabIndex = 7;
             // 
             // buttonMentes
             // 
@@ -210,11 +202,20 @@
             this.listBoxKedvencHobbi.Size = new System.Drawing.Size(185, 108);
             this.listBoxKedvencHobbi.TabIndex = 14;
             // 
+            // listBoxFile
+            // 
+            this.listBoxFile.FormattingEnabled = true;
+            this.listBoxFile.Location = new System.Drawing.Point(203, 28);
+            this.listBoxFile.Name = "listBoxFile";
+            this.listBoxFile.Size = new System.Drawing.Size(291, 264);
+            this.listBoxFile.TabIndex = 15;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(506, 311);
+            this.Controls.Add(this.listBoxFile);
             this.Controls.Add(this.listBoxKedvencHobbi);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelUjHobbi);
@@ -222,7 +223,6 @@
             this.Controls.Add(this.textBoxHobbi);
             this.Controls.Add(this.buttonBetoltes);
             this.Controls.Add(this.buttonMentes);
-            this.Controls.Add(this.listBoxFile);
             this.Controls.Add(this.labelKedvencHobbi);
             this.Controls.Add(this.groupBoxNem);
             this.Controls.Add(this.labelNem);
@@ -249,7 +249,6 @@
         private System.Windows.Forms.Label labelSzulDatum;
         private System.Windows.Forms.Label labelNem;
         private System.Windows.Forms.Label labelKedvencHobbi;
-        private System.Windows.Forms.ListBox listBoxFile;
         private System.Windows.Forms.Button buttonMentes;
         private System.Windows.Forms.Button buttonBetoltes;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
@@ -262,6 +261,7 @@
         private System.Windows.Forms.GroupBox groupBoxNem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox listBoxKedvencHobbi;
+        private System.Windows.Forms.ListBox listBoxFile;
     }
 }
 

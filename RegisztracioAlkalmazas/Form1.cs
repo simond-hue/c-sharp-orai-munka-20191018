@@ -13,7 +13,6 @@ namespace RegisztracioAlkalmazas
 {
     public partial class Form1 : Form
     {
-        private Ember ember;
         private List<Ember> emberek = new List<Ember>();
 
         public Form1()
@@ -43,7 +42,7 @@ namespace RegisztracioAlkalmazas
                 }
                 listBoxKedvencHobbi.Items.Clear();
                 listBoxKedvencHobbi.Text = "";
-                ember = new Ember(nev, szuldatum, nem, hobbik);
+                Ember ember = new Ember(nev, szuldatum, nem, hobbik);
                 emberek.Add(ember);
                 StreamWriter write = new StreamWriter(saveFileDialog1.FileName);
                 for (int i = 0; i < emberek.Count; i++)
@@ -57,7 +56,8 @@ namespace RegisztracioAlkalmazas
         private void buttonBetoltes_Click(object sender, EventArgs e)
         {
             if(openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
+            { 
+                emberek.Clear();
                 listBoxFile.Items.Clear();
                 listBoxFile.Text = "";
                 StreamReader read = new StreamReader(openFileDialog1.FileName);
@@ -77,12 +77,12 @@ namespace RegisztracioAlkalmazas
                         nem = Nem.No;
                     }
                     List<string> hobbik = new List<string>();
-                    for (int i = 3; i < adatok.Length; i++)
+                    for (int i = 3; i < adatok.Length-1; i++)
                     {
                         hobbik.Add(adatok[i]);
                     }
 
-                    ember = new Ember(nev, szuldatum, nem, hobbik);
+                    Ember ember = new Ember(nev, szuldatum, nem, hobbik);
                     emberek.Add(ember);
                 }
                 for (int i = 0; i < emberek.Count; i++)

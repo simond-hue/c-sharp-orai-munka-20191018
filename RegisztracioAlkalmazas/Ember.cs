@@ -28,13 +28,12 @@ namespace RegisztracioAlkalmazas
 
         public override string ToString()
         {
-            string s = "";
-            s += this.nev+";"+this.szuldatum+";"+this.nem+";";
-            foreach(string str in this.hobbik)
+            string s = this.nev + ";" + this.szuldatum + ";" + this.nem + ";";
+            foreach (string str in this.hobbik)
             {
                 s += str + ";";
             }
-            return s;
+            return String.Format(s);
         }
     }
 }
